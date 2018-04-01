@@ -15,10 +15,10 @@
 
    <div class="field">
     <div class="control">
-      <label class="label">Team</label>
+      <label class="label">Команда</label>
       <div class="control has-icons-left">
         <span class="select">
-          <%= f.input_field :team_id, collection: @teams, prompt: "Select team" %>
+          <%= f.input_field :team_id, collection: @teams, prompt: "Выбрать команду" %>
         </span>
         <span class="icon is-small is-left">
           <i class="fa fa-users"></i>
@@ -39,7 +39,7 @@
         <strong>It looks as though you are not part of a team yet!</strong>
         <p>You can create a team or get invited by another user to join.</p>
         <br />
-        <%= link_to 'Create a team', new_team_path, class:'button' %>
+        <%= link_to 'Создать команду', new_team_path, class:'button' %>
       </div>
     </article>
 

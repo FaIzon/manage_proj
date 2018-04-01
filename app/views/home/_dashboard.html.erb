@@ -1,11 +1,11 @@
 <section class="section pt3">
-  <p class="title is-5 border-bottom pb3 has-text-centered">Welcome <%= current_user.name %> </p>
+  <p class="title is-5 border-bottom pb3 has-text-centered">Здравствуйте <%= current_user.name %> </p>
   <div class="columns">
 
     <div class="column border-right ph4">
       <div class="level">
         <div class="level-left">
-          <h3 class="subtitle is-5">My Projects <span class="tag is-rounded"><%= @projects.count %></span></h3>
+          <h3 class="subtitle is-5">Мои проекты <span class="tag is-rounded"><%= @projects.count %></span></h3>
         </div>
         <div class="level-right">
           <p class="field">
@@ -24,7 +24,7 @@
           <p class="subtitle is-6">
             <%= link_to project.team.name, project.team %>
           </p>
-          <p class="f6">Created by: <%= project.user.name %></p>
+          <p class="f6">Создано: <%= project.user.name %></p>
         </div>
       <% end %>
 
@@ -32,7 +32,7 @@
     <div class="column border-right ph4">
       <div class="level">
         <div class="level-left">
-          <h3 class="subtitle is-5">My Teams <span class="tag is-rounded"><%= @teams.count %></span></h3>
+          <h3 class="subtitle is-5">Команды <span class="tag is-rounded"><%= @teams.count %></span></h3>
         </div>
         <div class="level-right">
           <p class="field">
@@ -56,7 +56,7 @@
     </div>
 
     <div class="column ph4">
-      <h3 class="subtitle is-5">Activity</h3>
+      <h3 class="subtitle is-5">Активность</h3>
       <hr />
       <ul class="list">
         <%= render_activities(@activities) %>

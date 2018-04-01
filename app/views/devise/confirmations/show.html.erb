@@ -3,7 +3,7 @@
     <div class="column is-4">
       <%= form_for resource, :as => resource_name, :url => update_user_confirmation_path, :html => {:method => 'put'}, :id => 'activation-form' do |f| %>
         <%= devise_error_messages! %>
-          <h4 class="subtitle is-3">Account Activation<% if resource.try(:user_name) %> for <%= resource.user_name %><% end %></h4>
+          <h4 class="subtitle is-3">Активация аккаунта<% if resource.try(:user_name) %> for <%= resource.user_name %><% end %></h4>
           <% if @requires_password %>
             <div class="field">
               <div class="control">

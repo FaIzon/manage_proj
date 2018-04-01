@@ -2,10 +2,10 @@
   <div class="container">
     <div class="columns">
       <div class="column is-8">
-        <p>Team Name:</p>
+        <p>Название команды:</p>
         <h1 class="title is-2"><%= @team.name %></h1>
         <hr/>
-        <h2 class="subtitle"> Team Members</h2>
+        <h2 class="subtitle"> Члены команды</h2>
           <div class="columns">
           <% @team.users.each do |member|  %>
             <div class="column is-4">
@@ -17,7 +17,7 @@
                 <div class="column is-9">
                   <h3 class="fw6 f4"><%= member.name %></h3>
                   <p><%= member.email %></p>
-                  <p class="f6"><%= verbose_date(member.created_at) %></p>
+                  <p class="f6"><%= l member.created_at, format: :short  %></p>
                 </div>
               </div>
               </div>
@@ -26,8 +26,8 @@
           </div>
       </div>
       <div class="column is-4 projects-column">
-        <p><%= @team.name %> projects</p>
-        <h3 class="title is-4">Active Projects</h3>
+        <p><%= @team.name %> проекты</p>
+        <h3 class="title is-4">Текущие проекты</h3>
         <hr/>
         <% if @team.projects.exists? %>
           <ul>
@@ -44,8 +44,8 @@
       </div>
     </div>
     <div class="utility-buttons">
-    <%= link_to 'Edit', edit_team_path(@team), class:'button' %>
-    <%= link_to 'Back', teams_path, class:'button' %>
+    <%= link_to 'Редактировать', edit_team_path(@team), class:'button' %>
+    <%= link_to 'Назад', teams_path, class:'button' %>
     </div>
   </div>
 </section>

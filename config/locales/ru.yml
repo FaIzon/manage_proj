@@ -1,0 +1,27 @@
+ru:
+  activerecord:
+    models:
+      user: 'Пользователь'
+      project: 'Проект'
+      team: 'Команда'
+    attributes:
+      user:
+        email: 'Email'
+        name: 'Имя'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+      project:
+        name: 'Название'
+        description: 'Описание'
+      team:
+        name: 'Название'
+  controllers:
+    projects:
+      created: 'Проект успешно создан.'
+      updated: 'Проект успешно обновлен.'
+      destroyed: 'Проект успешно удален.'
+    teams:
+      created: 'Команда успешно создана.'
+      updated: 'Команда обновлена.'
+      destroyed: 'Команда успешно удалена.'
+

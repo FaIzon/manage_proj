@@ -8,7 +8,7 @@
       } do %>
 
   <div class="column is-5" :class="{ formstatic: scrollPosition < 100, formfixed: scrollPosition > 100 }">
-    <h1 class="subtitle is-2">Create a new team</h1>
+    <h1 class="subtitle is-2">Создание команды</h1>
     <%= render 'form', team: @team %>
   </div>
 
@@ -16,7 +16,7 @@
     <h2 class="subtitle is-3">{{ team.name }}</h2>
     <table class="table is-fullwidth" v-if="team.users_attributes.length">
       <thead>
-        <th>Name</th>
+        <th>Имя</th>
         <th>Email</th>
       </thead>
       <tr class="user" v-for="(user, index) in team.users_attributes">

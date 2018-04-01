@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bulma-rails', '~> 0.6.1'
 gem 'simple_form', '~> 3.5'
 gem 'devise', '~> 4.4'
+gem 'devise-i18n'
+gem 'russian'
+
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem "wysiwyg-rails"
@@ -45,7 +48,7 @@ gem 'public_activity', '~> 1.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  #gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
