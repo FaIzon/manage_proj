@@ -32,7 +32,7 @@ class TeamsController < ApplicationController
 
     respond_to do |format|
       if @team.save
-        format.html { redirect_to root_path, notice: I18n.t('controllers.teams.created')}
+        format.html { redirect_to root_path, notice: I18n.t("controllers.teams.created") }
         format.json { render :show, status: :created, location: @team }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class TeamsController < ApplicationController
   def update
     respond_to do |format|
       if @team.update(team_params)
-        format.html { redirect_to @team, notice: I18n.t('controllers.teams.updated')}
+        format.html { redirect_to @team, notice: I18n.t("controllers.teams.updated") }
         format.json { render :show, status: :ok, location: @team }
       else
         format.html { render :edit }
@@ -60,19 +60,20 @@ class TeamsController < ApplicationController
   def destroy
     @team.destroy
     respond_to do |format|
-      format.html { redirect_to teams_url, notice: I18n.t('controllers.teams.destroyed')}
+      format.html { redirect_to teams_url, notice: I18n.t("controllers.teams.destroyed") }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_team
-      @team = Team.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def team_params
-      params.require(:team).permit(:name, users_attributes: [:id, :name, :email, :_destroy])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_team
+    @team = Team.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def team_params
+    params.require(:team).permit(:name, users_attributes: [:id, :name, :email, :_destroy])
+  end
 end
